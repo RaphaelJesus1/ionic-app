@@ -1,0 +1,7 @@
+{
+  "name": "maps-university",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
