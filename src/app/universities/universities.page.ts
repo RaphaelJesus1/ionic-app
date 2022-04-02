@@ -20,7 +20,8 @@ export class UniversitiesPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private http: HttpClient // private router: Router
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -49,6 +50,11 @@ export class UniversitiesPage implements OnInit {
     this.http.get(searchUrl).subscribe((data: GetUniversitiesResponse[]) => {
       this.universities = data.map((university) => parseUniversity(university));
       console.log(this.universities);
+      console.log(searchUrl);
     });
+  }
+
+  redirectToHomePage() {
+    this.router.navigate(['home']);
   }
 }

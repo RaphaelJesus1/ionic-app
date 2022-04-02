@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>universities</ion-title>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="2">
+          <ion-button
+            fill="clear"
+            size="small"
+            color="dark"
+            (click)="redirectToHomePage()"
+          >
+            <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-title>universities</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let u of universities">
+      <ion-label>name: {{u.name}}</ion-label>
+      <ion-label>country: {{u.country}}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

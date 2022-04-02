@@ -13,13 +13,14 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  setName(name: University['name']) {
+  setName(name: string) {
     if (this.searchName !== name) {
       this.searchName = name;
     }
+    console.log(name);
   }
 
-  setCountry(country: University['country']) {
+  setCountry(country: string) {
     if (this.searchCountry !== country) {
       this.searchCountry = country;
     }
@@ -33,6 +34,6 @@ export class HomePage {
       },
     };
 
-    this.router.navigate(['university'], navigationExtras);
+    this.router.navigate(['universities'], navigationExtras);
   }
 }

@@ -12,8 +12,16 @@
   </ion-header>
 
   <div id="container">
-    <ion-input type="text" placeholder="name"></ion-input>
-    <ion-input type="text" placeholder="country"></ion-input>
+    <ion-input
+      type="text"
+      placeholder="name"
+      (change)="this.setName($event.target.value)"
+    ></ion-input>
+    <ion-input
+      type="text"
+      placeholder="country"
+      (change)="this.setCountry($event.target.value)"
+    ></ion-input>
     <ion-button
       (click)="sendRequest()"
       expand="block"
