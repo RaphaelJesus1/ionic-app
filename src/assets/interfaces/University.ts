@@ -6,3 +6,5 @@ export interface University {
   stateProvince?: string;
   webPages: string[];
 }
+
+

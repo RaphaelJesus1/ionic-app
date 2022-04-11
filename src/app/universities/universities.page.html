@@ -21,10 +21,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let u of universities">
-      <ion-label>name: {{u.name}}</ion-label>
-      <ion-label>country: {{u.country}}</ion-label>
-    </ion-item>
-  </ion-list>
+
+  <ion-card *ngFor="let u of universities" class="uCard">
+    <ion-card-header>
+      <ion-card-title>{{u.name}}</ion-card-title>
+      <ion-card-subtitle>{{u.country}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{u.alphaTwoCode}}</p>
+      <p>{{u.stateProvince}}</p>
+      <p>{{u.domains}}</p>
+      <p>Site: <a class="colorUrl">{{u.webPages}}</a></p>
+      
+    </ion-card-content>
+  </ion-card>
+  
+
 </ion-content>
